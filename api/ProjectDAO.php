@@ -1,5 +1,5 @@
 <?php
-
+include_once '../includes/Connexion.php';
 class ProjectDAO{
     private PDO $linkpdo;
     public function __construct(){
@@ -20,7 +20,7 @@ class ProjectDAO{
             while($donneesTags=$reqTags->fetch()){
                 array_push($arrTags,$donneesTags['title']);
             }
-            $arr[]=array(
+            $project=array(
                 'id'=>$donnees['id_project'],
                 'title'=>$donnees['title'],
                 'description'=>$donnees['description'],
@@ -30,6 +30,8 @@ class ProjectDAO{
                 'date_fin'=>$date_fin,
                 'tags'=>$arrTags
             );
+            array_push($arr,$project);
         }
+        return $arr;
     }
 }
