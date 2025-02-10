@@ -1,0 +1,22 @@
+# Enable RewriteEngine
+RewriteEngine On
+
+# Restrict to GET requests only
+RewriteCond %{REQUEST_METHOD} !^GET$
+RewriteRule ^ - [F,L]
+
+# Remove ".php" extension and convert clean URL to query string
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/projects/([0-9]+)$ /api?projects=$1 [L,QSA]
+
+# CORS Setup (if needed)
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>
+
+# Handle preflight requests for CORS (important for POST/PUT requests)
+RewriteCond %{REQUEST_METHOD} OPTIONS
+RewriteRule ^(.*)$ $1 [R=200,L]

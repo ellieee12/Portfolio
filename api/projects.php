@@ -15,6 +15,9 @@ function delivrer_reponse($status_code,$status_message,$data){
     /// Affichage de la réponse (Retourné au client)
     echo $json_response;
 }
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 $dao  = new ProjectDAO();
 $http_method = $_SERVER['REQUEST_METHOD'];
