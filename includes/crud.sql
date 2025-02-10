@@ -53,3 +53,15 @@ INSERT INTO tag(id_tag,title) VALUES (6,'JavaScript');
 INSERT INTO tag(id_tag,title) VALUES (7,'Python');
 INSERT INTO tag(id_tag,title) VALUES (8,'C');
 INSERT INTO tag(id_tag,title) VALUES (9,'Doxygen');
+
+INSERT INTO project_tag(id_project,id_tag) VALUES (1,1);
+INSERT INTO project_tag(id_project,id_tag) VALUES (1,2);
+INSERT INTO project_tag(id_project,id_tag) VALUES (1,3);
+INSERT INTO project_tag(id_project,id_tag) VALUES (2,3);
+INSERT INTO project_tag(id_project,id_tag) VALUES (2,4);
+INSERT INTO project_tag(id_project,id_tag) VALUES (2,5);
+INSERT INTO project_tag(id_project,id_tag) VALUES (2,2);
+INSERT INTO project_tag(id_project,id_tag) VALUES (2,6);
+INSERT INTO project_tag(id_project,id_tag) VALUES (3,7);
+INSERT INTO project_tag(id_project,id_tag) VALUES (4,8);
+INSERT INTO project_tag(id_project,id_tag) VALUES (4,9);
