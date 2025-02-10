@@ -47,5 +47,9 @@ VALUES (4, 'Application de géolocalisation',
 INSERT INTO tag(id_tag,title) VALUES (1,'Java');
 INSERT INTO tag(id_tag,title) VALUES (2,'MySQL');
 INSERT INTO tag(id_tag,title) VALUES (3,'HTML');
-INSERT INTO tag(id_tag,title) VALUES (1,'CSS');
-INSERT INTO tag(id_tag,title) VALUES (1,'PHP');
+INSERT INTO tag(id_tag,title) VALUES (4,'CSS');
+INSERT INTO tag(id_tag,title) VALUES (5,'PHP');
+INSERT INTO tag(id_tag,title) VALUES (6,'JavaScript');
+INSERT INTO tag(id_tag,title) VALUES (7,'Python');
+INSERT INTO tag(id_tag,title) VALUES (8,'C');
+INSERT INTO tag(id_tag,title) VALUES (9,'Doxygen');
