@@ -1,5 +1,9 @@
+DROP TABLE IF EXISTS project_tag;
+DROP TABLE IF EXISTS project;
+DROP TABLE IF EXISTS tag;
+
 CREATE TABLE project (
-  	id_project int auto_increment,
+  	id_project int,
     title varchar(500),
     description tinytext,
     photo varchar(500),
@@ -10,7 +14,7 @@ CREATE TABLE project (
 );
 
 CREATE TABLE tag (
-	id_tag int auto_increment,
+	id_tag int,
     title varchar(500),
     primary key(id_tag)
 );
@@ -22,3 +26,26 @@ CREATE TABLE project_tag (
     foreign key (id_project) references project(id_project),
     foreign key (id_tag) references tag(id_tag)
 );
+
+INSERT INTO project(id_project,title,description,photo,site_project,date_debut,date_fin)
+VALUES (1, 'Application de gestion de biens immobiliers',
+        'Application de gestion des biens immobiliers permettant aux propriétaires de gérer leurs locations. Implémentation de CRUD via API, d''architecture DAO/MVC et de méthodologie SCRUM.',
+        './images/default.png', './projects.html', '2024-10-01', '2024-12-01');
+INSERT INTO project(id_project,title,description,photo,site_project,date_debut,date_fin)
+VALUES (2, 'Application de gestion d''une équipe sportive',
+        'Application de gestion d''une équipe de Takraw intégrant les opérations CRUD via API. Conception d''une base de données MySQL avec accès sécurisé via PDO pour une gestion efficace des informations.',
+        './images/default.png', './projects.html', '2024-10-01', '2024-12-01');
+INSERT INTO project(id_project,title,description,photo,site_project,date_debut,date_fin)
+VALUES (3, 'Analyse des algorithmes de plus court chemin en graphes',
+        'Analyse et comparaison des algorithmes de Dijkstra et Bellman-Ford, avec génération et visualisation de graphes via NetworkX en Python pour l''étude des plus courts chemins.',
+        './images/default.png', './projects.html', '2024-05-01', '2024-06-01');
+INSERT INTO project(id_project,title,description,photo,site_project,date_debut,date_fin)
+VALUES (4, 'Application de géolocalisation',
+        'Étude et extraction des données de trames GPS NMEA 0183, avec enregistrement des résultats dans des fichiers structurés. Développement d''une application de géolocalisation en C, documentée avec Doxygen.',
+        './images/default.png', './projects.html', '2024-03-01', '2024-04-01');
+
+INSERT INTO tag(id_tag,title) VALUES (1,'Java');
+INSERT INTO tag(id_tag,title) VALUES (2,'MySQL');
+INSERT INTO tag(id_tag,title) VALUES (3,'HTML');
+INSERT INTO tag(id_tag,title) VALUES (1,'CSS');
+INSERT INTO tag(id_tag,title) VALUES (1,'PHP');
