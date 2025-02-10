@@ -11,8 +11,10 @@ class ProjectDAO{
         $req->execute();
         $arr = array();
         while($donnees=$req->fetch()){
-            $date_debut = date('Y-m',$donnees['date_debut']);
-            $date_fin = date('Y-m',$donnees['date_fin']);
+            $date_debut = (new DateTime())->setTimestamp( strtotime($donnees['date_debut']));
+            $date_debut = date('Y-m',$date_debut->getTimestamp());
+            $date_fin = (new DateTime())->setTimestamp( strtotime($donnees['date_fin']));
+            $date_fin = date('Y-m',$date_fin->getTimestamp());
             $queryTags = "SELECT t.title FROM project_tag p, tag t WHERE p.id_tag=t.id_tag AND p.id_project=:id";
             $reqTags = $this->linkpdo->prepare($queryTags);
             $reqTags->execute(array('id'=>$donnees['id_project']));
