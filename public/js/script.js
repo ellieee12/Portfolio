@@ -35,4 +35,3 @@ function getAllProjects(){
 }
 
 document.addEventListener("DOMContentLoaded",generateNav);
-document.getElementById("try").addEventListener("click",getAllProjects);

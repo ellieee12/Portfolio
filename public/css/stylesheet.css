@@ -13,3 +13,57 @@
     color: black;
     margin : 0 20px;
 }
+.img-container{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.img-turn{
+    z-index:3;
+    position: absolute;
+    bottom: -30px;
+    left : 350px;
+    height: 200px;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.img-turn:hover {
+    animation : rotateImage 8s infinite;
+}
+
+.img-ellisa{
+    z-index: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    transition: 300ms ease all;
+    height: 500px;
+}
+
+.img-ellisa:hover {
+    transform : rotate(0.01turn); 
+}
+
+.img-logo{
+    z-index: 2;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    height : 100px;
+    transition: 300ms ease all;
+}
+
+.img-logo:hover{
+    transform : rotate(-0.01turn); 
+}
+
+@keyframes rotateImage {
+    0% {
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+
+    100% {
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
