@@ -140,6 +140,7 @@ button:hover{
     flex-direction: column;
     justify-content: center;
 }
+
 .div-projets-tags,.div-projets-projet{
     display:flex;
     flex-direction: row;
@@ -184,5 +185,51 @@ button:hover{
     padding :20px;
     background-color: #eee4cf;
 }
-
-
+.div-contacts{
+    display:flex;
+    flex-direction: column;
+    margin-left:100px;
+    margin-right: 100px;
+}
+.div-contacts-liste{
+    column-gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.div-contact-item{
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    padding : 20px;
+    box-shadow: 2px 2px 0  rgba(0, 0, 0, 1);
+    align-items: center;
+    row-gap: 10px;
+    width:230px;
+}
+.div-contact-item:hover{
+    transform: scale(1.02);
+}
+.div-contact-item a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+.div-contact-item img{
+    height:75px;
+    width:75px;
+}
+.div-contact-item h2,.div-contact-item p, .div-contact-item a{
+    margin:0;
+    text-decoration: none;
+    color:black;
+}
+.div-contacts h1{
+    text-align: center;
+}
+#div-linkedin{
+    cursor:pointer;
+}

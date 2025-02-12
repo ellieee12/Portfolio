@@ -83,4 +83,7 @@ function buildProjects(data){
 
 document.addEventListener("DOMContentLoaded",generateNav);
 buildProjects(getAllProjects());
+document.getElementById("div-linkedin").addEventListener('click',function(){
+    window.location.href="https://www.linkedin.com/in/ellisa-ee-982103213/";
+});
 
