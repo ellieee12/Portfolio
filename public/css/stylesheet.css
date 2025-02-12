@@ -1,7 +1,13 @@
+body{
+    font-family : 'Public Sans';
+    
+}
 .nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .nav p{
@@ -15,14 +21,16 @@
 }
 .img-container{
     position: relative;
+    height:550px;
     top: 0;
     left: 0;
+    bottom:0;
 }
 .img-turn{
     z-index:3;
-    position: absolute;
-    bottom: -30px;
-    left : 350px;
+    position: relative;
+    bottom: 200px;
+    left : 300px;
     height: 200px;
     transform-style: preserve-3d;
     perspective: 1000px;
@@ -34,6 +42,7 @@
 
 .img-ellisa{
     z-index: 1;
+    transform : rotate(0.01turn); 
     position: relative;
     top: 0;
     left: 0;
@@ -42,11 +51,12 @@
 }
 
 .img-ellisa:hover {
-    transform : rotate(0.01turn); 
+    transform : rotate(0.02turn); 
 }
 
 .img-logo{
     z-index: 2;
+    transform : rotate(-0.01turn);
     position: absolute;
     top: 30px;
     left: 30px;
@@ -55,7 +65,23 @@
 }
 
 .img-logo:hover{
-    transform : rotate(-0.01turn); 
+    transform : rotate(-0.02turn); 
+}
+
+.about-me-section{
+    display:flex;
+    flex-direction: row;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.about-me-text{
+    margin-left: 30px;
+}
+
+p {
+    line-height: 1.5;
+    text-align: left;
 }
 
 @keyframes rotateImage {
@@ -67,3 +93,43 @@
         transform: rotate3d(0, 0, 1, 360deg);
     }
 }
+
+
+button a{
+    text-decoration: none;
+    color:black;
+}
+button{
+    transition: 100ms ease;
+    background-color: #F7CB45;
+    box-shadow: 2px 2px 0  rgba(0, 0, 0, 1);
+    padding : 10px 20px;
+    border-radius: 20px;
+    margin-right: 10px; margin-right: 10px;
+}
+button:hover{
+    transform: scale(1.02);
+    box-shadow: 4px 4px 0  rgba(0, 0, 0, 1);
+}
+.msia-france{
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.msia-france-text{
+    display: flex;
+    flex-direction: row;
+    border-style: solid;
+    border-radius: 15px;
+    border-width: 2px;
+}
+.msia-france-text img{
+    height: 200px;
+    margin : 20px
+}
+.msia-france-text p, .msia-france-text button{
+    margin : 20px
+}
+
+

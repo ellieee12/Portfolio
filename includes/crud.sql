@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS project;
 DROP TABLE IF EXISTS tag;
 
 CREATE TABLE project (
-  	id_project int,
+    id_project int,
     title varchar(500),
     description tinytext,
     photo varchar(500),
