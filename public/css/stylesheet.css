@@ -131,5 +131,44 @@ button:hover{
 .msia-france-text p, .msia-france-text button{
     margin : 20px
 }
+.div-projets-tags-text,.div-projets-text,.div-projets{
+    display:flex;
+    flex-direction: column;
+}
+.div-projets-tags,.div-projets-projet{
+    display:flex;
+    flex-direction: row;
+}
+.div-projets-tags p{
+    margin: 0px 10px;
+    padding : 5px 8px;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    background-color: #91A8ED;
+    box-shadow: 2px 2px 0  rgba(0, 0, 0, 1);
+}
+
+.div-projets-tags-text{
+    margin-left:20px;
+}
+.div-projets-img img{
+    height : 200px;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+}
+.div-projets{
+    margin-left:100px;
+    margin-right:100px;
+    margin-top:30px;
+}
+.div-projets-text{
+    align-items: flex-start;
+}
+.div-projets-projet{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
 
 

@@ -30,8 +30,57 @@ function getAllProjects(){
     let data = fetch(baseURL + resource)
     .then(response=>response.json())
     .then(data=>{
-        console.log(data);
+        buildProjects(data.data);
     });
+}
+function buildProjects(data){
+    console.log(data);
+    let div = document.getElementById("div-projets");
+    for (let i = 0 ; i <data.length ; i++){
+        console.log(data);
+        let divProjet = document.createElement("div");
+        let divTagsText = document.createElement("div");
+        let divTags = document.createElement("div");
+        let divText = document.createElement("div");
+        let divImg = document.createElement("div");
+        divImg.setAttribute("class","div-projets-img");
+        divText.setAttribute("class","div-projets-text");
+        divTags.setAttribute("class","div-projets-tags");
+        divTagsText.setAttribute("class","div-projets-tags-text");
+        divProjet.setAttribute("class","div-projets-projet");
+        for (let j = 0 ; j < data[i].tags.length ; j++){
+            let tag = document.createElement("p");
+            tag.innerText = data[i].tags[j];
+            divTags.appendChild(tag);
+        }
+        //create contents for image
+        let img = document.createElement("img");
+        img.setAttribute("src",data[i].photo);
+        divImg.appendChild(img);
+        //create contents for title and description 
+        let p = document.createElement("h3");
+        p.innerText = data[i].title;
+        let text = document.createElement("p");
+        divText.appendChild(p);
+        divText.appendChild(text);
+        let btn = document.createElement("button");
+        let a = document.createElement("a");
+        a.setAttribute("href",data[i].site_projet);
+        a.innerText = "Voir le projet";
+        btn.appendChild(a);
+        divText.appendChild(btn);
+
+        text.innerText = data[i].description;
+        divTagsText.appendChild(divTags);
+        divTagsText.appendChild(divText);
+
+        divProjet.appendChild(divImg);
+        divProjet.appendChild(divTagsText);
+        div.appendChild(divProjet);
+    }
+    
 }
 
 document.addEventListener("DOMContentLoaded",generateNav);
+buildProjects(getAllProjects());
+
