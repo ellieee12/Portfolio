@@ -233,3 +233,56 @@ button:hover{
 #div-linkedin{
     cursor:pointer;
 }
+.div-contact-me{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: stretch;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top:100px;
+    border-style: solid;
+    border-radius: 20px;
+    padding: 10px 30px;
+    background-color: #eee4cf;
+}
+.div-contact-me-text{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 40%;
+}
+
+.div-contact-me-form{
+    display:flex;
+    flex-direction: column;
+    margin:20px;
+    width: 60%;
+    justify-content: left;
+}
+
+.div-contact-me-form button{
+    width:200px
+}
+
+.div-contact-me-form input,.div-contact-me-form textarea{
+    height:20px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    padding : 10px;
+    box-shadow: 2px 2px 0  rgba(0, 0, 0, 1);
+    border-color: black;
+    font-family: 'Public Sans';
+    width: 100%;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+.div-contact-me-form textarea{
+    height:150px;
+    resize:none;
+    overflow:auto;
+}
