@@ -135,18 +135,27 @@ button:hover{
     display:flex;
     flex-direction: column;
 }
+.div-projets-img{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .div-projets-tags,.div-projets-projet{
     display:flex;
     flex-direction: row;
 }
 .div-projets-tags p{
-    margin: 0px 10px;
     padding : 5px 8px;
+    margin: 0px;
     border-style: solid;
     border-radius: 20px;
     border-width: 2px;
     background-color: #91A8ED;
     box-shadow: 2px 2px 0  rgba(0, 0, 0, 1);
+}
+.div-projets-tags{
+    gap:20px;
+    flex-wrap: wrap;
 }
 
 .div-projets-tags-text{
@@ -169,6 +178,11 @@ button:hover{
 .div-projets-projet{
     margin-bottom: 30px;
     margin-top: 30px;
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    padding :20px;
+    background-color: #eee4cf;
 }
 
 
