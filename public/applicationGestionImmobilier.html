@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href='https://fonts.googleapis.com/css?family=Public Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav id = "nav" class = "nav"></nav>
+    <h1 style="margin-left: 100px;margin-right: 100px;">Application de Gestion de Biens Immobiliers</h1>
+    <div class="div-projets-projet" style="margin-left: 100px;margin-right: 100px;">
+        <div class="div-projets-img">
+            <img src="./images/projet-immobilier1.png" alt="application gestion immobilier"> 
+        </div>
+        <div class="div-projets-tags-text">
+            <p>
+                Ce projet consiste à développer une application de gestion de biens immobiliers 
+                dans le cadre d'une SAE au semestre 3 du BUT Informatique. Cette application permet 
+                à un propriétaire de gérer ses biens loués, y compris les locataires concernés. 
+                Les données essentielles, telles que les baux, diagnostics, factures et états des 
+                lieux, sont centralisées. Par la suite, l'application propose des fonctionnalités 
+                permettant de calculer les régularisations de charges, de gérer le solde de tout 
+                compte, de générer des documents fiscaux et de suivre les travaux.
+            </p>
+            <a href="https://github.com/ellieee12/application-gestion-immobilier"><button style="background-color: #22A094;">Visiter le repo Github</button></a>
+        </div>
+    </div>
+    
+    <div class="div-contacts">
+        <div><h2 style="text-align: center; margin-top: 50px;">Technologies et outils utilisés</h2></div>
+        <div class="div-contacts-liste">
+            <div class="div-contact-item">
+                <img src="./images/logo-eclipse.png">
+                <h3>Eclipse</h3>
+                <p>IDE pour le développement</p>
+            </div>
+            <div class="div-contact-item">
+                <img src="./images/logo-java.png" >
+                <h3>Java</h3>
+                <p>Langage de programmation principal</p>
+            </div>
+            <div class="div-contact-item">
+                <img src="./images/logo-mysql.png" >
+                <h3>MySQL</h3>
+                <p>Base de donées</p>
+            </div>
+            <div class="div-contact-item">
+                <img src="./images/logo-HTML.png" >
+                <h3>HTML</h3>
+                <p>Mise en forme de génération de documents</p>
+            </div>
+        </div>
+    </div>
+
+    <h2 style="margin-left: 100px;margin-right: 100px; margin-top: 100px;text-align: center;">Architecture et méthodologie</h2>
+    <div class="div-projets-projet" style="margin-left: 100px;margin-right: 100px; background-color: #F7CB45;flex-direction: row; align-items: center; box-shadow: 2px 2px 0  rgba(0, 0, 0, 1);">
+        <div class="div-projets-tags-text">
+            <h3>Projet Maven</h3>
+            <p>
+                L'application est développée sous forme d'un projet Maven, 
+                ce qui facilite la gestion des dépendances et 
+                l'automatisation du processus de build. Cela permet 
+                d'intégrer efficacement divers outils et bibliothèques 
+                essentiels au projet, tels que JUnit, MySQL Connectors, 
+                Maven Compiler Plugin, et Swing.
+            </p>
+        </div>
+    </div>
+    <div class="div-projets-projet" style="margin-left: 100px;margin-right: 100px; background-color: #91A8ED;flex-direction: row; align-items: center; box-shadow: 2px 2px 0  rgba(0, 0, 0, 1);">
+        <div class="div-projets-tags-text">
+            <h3>Architecture MVC</h3>
+            <p>
+                L'application suit l'architecture MVC (Modèle-Vue-Contrôleur),
+                une approche qui permet de structurer le code de manière 
+                modulaire. Cette approche permet une séparation la logique métier 
+                liée à la gestion de biens loués de l'affichage pour faciliter la 
+                maintenance et améliorer la réutilisabilité du code.
+            </p>
+        </div>
+    </div>
+    <div class="div-projets-projet" style="margin-left: 100px;margin-right: 100px; background-color: #F7CB45;flex-direction: row; align-items: center; box-shadow: 2px 2px 0  rgba(0, 0, 0, 1);">
+        <div class="div-projets-tags-text">
+            <h3>Patron DAO</h3>
+            <p>
+                L'implémentation du patron DAO (Data Access Object) 
+                optimise l'accès aux données et  
+                centralise les interactions avec la base de données, 
+                rendant le code plus modulaire, lisible et facile à 
+                maintenir, tout en améliorant la réutilisabilité et 
+                l’évolutivité de l’application.
+            </p>
+        </div>
+    </div>
+
+    <div style="margin-left: 100px;margin-right: 100px; margin-top: 50px; display: flex;flex-direction: column; align-items: center;">
+        <h2 style="text-align: center;margin-top: 100px;">Gestion de projet</h2>
+    <p>
+        Du côté gestion de projet, nous avons adopté un processus agile
+         inspiré de la méthode Scrum, avec un Sprint 0 de 5 semaines 
+         et 3 sprints, chacun ayant un timebox de 3 semaines. Les 
+         artefacts suivants sont utilisés pour assurer la transparence 
+         de notre travail et de nos progrès. Le document suivant fournit 
+         plus de détails sur l'adaptation de la gestion de projet pour 
+         le développement de cette application :
+    </p>
+    <a href="./docs/adaptation-gestion-projet.pdf"><button style="background-color: #FF91E7;">Télécharger l'adaptation de la gestion de projet</button></a>
+    </div>
+    <h2 style="margin-left: 100px;margin-right: 100px; margin-top: 100px;margin-bottom: 50px; text-align: center;">Activités de conception et développement</h2>
+    <div class="arrow-div">
+        <img src="./images/arrow-left.png" style="height: 100px;" id="arrow-left" class="arrow">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="./images/default.png" id="arrow-image">
+            <p id="arrow-description"></p>
+        </div>
+        
+        <img src="./images/arrow-right.png"style="height: 100px;" id="arrow-right" class="arrow">
+    </div>
+    <script>
+        let position = 0;
+        let arr = [];
+        let desc = [];
+        desc.push("Identification et priorisation des users stories","Conception du modèle conceptuel de données",
+        "Transformation du MCD en diagramme de classe","Eciture des tests","Gestion du backlog de sprint",
+        "Burndown Chart","Calcul de la vélocité et la capacité d'un sprint")
+        arr.push("./images/projet-immobilier2.png","./images/projet-immobilier3.png",
+        "./images/projet-immobilier4.png","./images/projet-immobilier5.png","./images/projet-immobilier6.png",
+        "./images/projet-immobilier7.png","./images/projet-immobilier8.png");
+        function updateElements(){
+            if (position==0){
+                document.getElementById("arrow-left").style.visibility = "hidden";
+                document.getElementById("arrow-right").style.visibility = "visible";
+            }else if(position==arr.length-1){
+                document.getElementById("arrow-right").style.visibility = "hidden";
+                document.getElementById("arrow-left").style.visibility = "visible";
+            }else{
+                document.getElementById("arrow-right").style.visibility = "visible";
+                document.getElementById("arrow-left").style.visibility = "visible";
+            }
+            document.getElementById("arrow-description").innerText=desc[position];
+            document.getElementById("arrow-image").setAttribute("src",arr[position]);
+        }
+        function moveLeft(){
+            if(position>0){
+                position--;
+            }
+            updateElements();
+        }
+
+        function moveRight(){
+            if(position<arr.length){
+                position++;
+            }
+            updateElements();
+        }
+        updateElements();
+        document.getElementById("arrow-left").addEventListener('click',moveLeft);
+        document.getElementById("arrow-right").addEventListener('click',moveRight);
+    </script>
+    <script src = "./js/scriptGenerate.js"></script>
+
+</body>
+</html>

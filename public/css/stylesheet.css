@@ -353,3 +353,21 @@ input:focus, textarea:focus {
     width: 100%;
     height: 100%;
 }
+.arrow-div{
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    column-gap: 30px;
+}
+#arrow-image{
+    border-style: solid;
+    border-radius: 20px;
+    border-width: 2px;
+    height:400px;
+}
+.arrow{
+    cursor: pointer;
+}
+.arrow:hover{
+    transform: scale(1.15);
+}

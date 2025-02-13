@@ -65,10 +65,11 @@ function buildProjects(data){
         divText.appendChild(text);
         let btn = document.createElement("button");
         let a = document.createElement("a");
-        a.setAttribute("href",data[i].site_projet);
-        a.innerText = "Voir le projet";
-        btn.appendChild(a);
-        divText.appendChild(btn);
+        a.setAttribute("href",data[i].site_project);
+        btn.innerText = "Voir le projet";
+        btn.style.cursor="pointer";
+        a.appendChild(btn);
+        divText.appendChild(a);
 
         text.innerText = data[i].description;
         divTagsText.appendChild(divTags);
