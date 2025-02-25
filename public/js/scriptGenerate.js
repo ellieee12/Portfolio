@@ -5,7 +5,7 @@ function generateNav(){
     let div = document.createElement("div");
     let aboutMe = createLink("About Me","index.html");
     let etudes = createLink("Etudes en France","#");
-    let comp = createLink("Compétences","#");
+    let comp = createLink("Projets","#");
     let benevol = createLink("Bénévolat","#");
     let contact = createLink("Contact","#");
 
