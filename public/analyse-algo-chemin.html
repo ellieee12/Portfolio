@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Public Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/stylesheet.css">
+    <title>Takraw Go!</title>
+</head>
+<body>
+    <nav id = "nav" class = "nav"></nav>
+    <h1 style="margin-left: 100px;margin-right: 100px;">Implémentation et Analyse des Algorithmes de Plus Courts Chemins</h1>
+    <div class="div-projets-projet" style="margin-left: 100px;margin-right: 100px;">
+        <div class="div-projets-img">
+            <img src="./images/projet-chemin2.png" alt="application gestion immobilier"> 
+        </div>
+        <div class="div-projets-tags-text">
+            <p>
+                Ce projet consiste à implémenter et tester les 
+                algorithmes de Dijkstra et Bellman-Ford afin de 
+                comparer leur complexité et de déterminer un seuil 
+                de forte connexité pour un graphe. Ces algorithmes 
+                sont implémentés en Python, et la visualisation des 
+                données ainsi que des graphes étudiés est réalisée à 
+                l’aide des modules NetworkX et Matplotlib. Le rapport 
+                détaillé, incluant les résultats obtenus et leur analyse, 
+                est rédigé en LaTeX.
+            </p>
+            <div style="display: flex;flex-direction: row; flex-wrap: wrap;">
+            <a href="./docs/Rapport_de_S202.pdf"><button style="background-color: #22A094;">Télécharger le rapport</button></a>
+            <a href="https://github.com/ellieee12/analyse-algo-chemin"><button style="background-color: #22A094;">Repo Github</button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="div-c|ntacts">
+        <div><h2 style="text-align: center; margin-top: 50px;">Technologies et outils utilisés</h2></div>
+        <div class="div-contacts-liste" style="flex-wrap: wrap; row-gap: 20px;">
+            <div class="div-contact-item" style="width:180px">
+                <img src="./images/logo-python.png" >
+                <h3>Python</h3>
+            </div>
+            <div class="div-contact-item" style="width:180px">
+                <img src="./images/logo-networkx.png" style="object-fit: cover;">
+                <h3>NetworkX</h3>            
+            </div>
+            <div class="div-contact-item" style="width:180px">
+                <img src="./images/logo-mathplotlib.png" style="object-fit: cover;">
+                <h3>matplotlib</h3>            
+            </div>
+        </div>
+    </div>
+
+    <h2 style="margin-left: 100px;margin-right: 100px; margin-top: 100px;text-align: center;">Résumé du résultat de l'analyse</h2>
+    <div class="div-projets-projet" style="margin-left: 100px;margin-right: 100px; background-color: #91A8ED;flex-direction: row; align-items: center; box-shadow: 2px 2px 0  rgba(0, 0, 0, 1);">
+        <div class="div-projets-tags-text">
+            <h3>Complexité</h3>
+            <p>
+                Après avoir généré des graphes pondérés aléatoires et 
+                visualisé les chemins optimaux avec NetworkX, nous avons
+                comparé expérimentalement les complexités temporelles 
+                des deux algorithmes. Les tests montrent que l'algorithme 
+                de Dijkstra est plus rapide, tandis que Bellman-Ford, 
+                plus lent, reste indispensable pour détecter les cycles 
+                à poids négatifs.
+            </p>
+        </div>
+    </div>
+    <div class="div-projets-projet" style="margin-left: 100px;margin-right: 100px; background-color: #F7CB45;flex-direction: row; align-items: center; box-shadow: 2px 2px 0  rgba(0, 0, 0, 1);">
+        <div class="div-projets-tags-text">
+            <h3>Seuil de forte connexité en fonction de la densité des arêtes</h3>
+            <p>
+                Des tests sur la forte connexité des 
+                graphes ont permis de déterminer un seuil en 
+                fonction de la densité des arêtes : plus la taille du 
+                graphe augmente, plus le seuil de connexité diminue selon 
+                une fonction asymptotique.
+            </p>
+        </div>
+    </div>
+
+    <h2 style="margin-left: 100px;margin-right: 100px; margin-top: 100px;margin-bottom: 50px; text-align: center;">Traces de l'analyse</h2>
+    <div class="arrow-div">
+        <img src="./images/arrow-left.png" style="height: 100px;" id="arrow-left" class="arrow">
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <img src="./images/default.png" id="arrow-image">
+            <p id="arrow-description"></p>
+        </div>
+        
+        <img src="./images/arrow-right.png"style="height: 100px;" id="arrow-right" class="arrow">
+    </div>
+    <script>
+        let position = 0;
+        let arr = [];
+        let desc = [];
+        desc.push("Visualisation du graphe généré aléatoirement",
+        "Graphe de la compléxité des algorithmes",
+        "Graphe de la complexité des algorithmes avec une proportion de flèches diminuant")
+        arr.push("./images/projet-chemin2.png",
+        "./images/projet-chemin1.png",
+        "./images/projet-chemin3.png");
+        function updateElements(){
+            if (position==0){
+                document.getElementById("arrow-left").style.visibility = "hidden";
+                document.getElementById("arrow-right").style.visibility = "visible";
+            }else if(position==arr.length-1){
+                document.getElementById("arrow-right").style.visibility = "hidden";
+                document.getElementById("arrow-left").style.visibility = "visible";
+            }else{
+                document.getElementById("arrow-right").style.visibility = "visible";
+                document.getElementById("arrow-left").style.visibility = "visible";
+            }
+            document.getElementById("arrow-description").innerText=desc[position];
+            document.getElementById("arrow-image").setAttribute("src",arr[position]);
+        }
+        function moveLeft(){
+            if(position>0){
+                position--;
+            }
+            updateElements();
+        }
+
+        function moveRight(){
+            if(position<arr.length){
+                position++;
+            }
+            updateElements();
+        }
+        updateElements();
+        document.getElementById("arrow-left").addEventListener('click',moveLeft);
+        document.getElementById("arrow-right").addEventListener('click',moveRight);
+    </script>
+    <script src = "./js/scriptGenerate.js"></script>
+
+</body>
+</html>

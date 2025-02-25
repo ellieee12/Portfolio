@@ -12,7 +12,7 @@
     <h1 style="margin-left: 100px;margin-right: 100px;">Application de Gestion de Biens Immobiliers</h1>
     <div class="div-projets-projet" style="margin-left: 100px;margin-right: 100px;">
         <div class="div-projets-img">
-            <img src="./images/projet-immobilier1.png" alt="application gestion immobilier"> 
+            <img src="./images/projet-takraw2.png" alt="application gestion immobilier"> 
         </div>
         <div class="div-projets-tags-text">
             <p>
@@ -26,16 +26,17 @@
                  permet de gérer les joueurs d'une équipe de takraw ainsi 
                  que les matchs passés et à venir. Un tableau de bord est 
                  également développé pour résumer les statistiques des 
-                 performances des joueurs.
+                 performances des joueurs. <br> Le site est accessible 
+                 en utilisant "admin" comme l'identifiant et le mot de passe.
             </p>
             <div style="display: flex;flex-direction: row; flex-wrap: wrap;">
                 <a href="https://ellisa.alwaysdata.net/Vue/index.php"><button style="background-color: #22A094;">Visiter Takraw Go!</button></a>
-            <a href="https://github.com/ellieee12/Takraw-Go"><button style="background-color: #22A094;">Visiter le repo Github</button></a>
+            <a href="https://github.com/ellieee12/Takraw-Go"><button style="background-color: #22A094;">Repo Github</button></a>
             </div>
         </div>
     </div>
 
-    <div class="div-contacts">
+    <div class="div-c|ntacts">
         <div><h2 style="text-align: center; margin-top: 50px;">Technologies et outils utilisés</h2></div>
         <div class="div-contacts-liste" style="flex-wrap: wrap; row-gap: 20px;">
             <div class="div-contact-item" style="width:180px">
@@ -62,6 +63,37 @@
             </div>
         </div>
     </div>
+    
+    <h2 style="margin-left: 100px;margin-right: 100px; margin-top: 100px;text-align: center;">Architecture et méthodologie</h2>
+    <div class="div-projets-projet" style="margin-left: 100px;margin-right: 100px; background-color: #91A8ED;flex-direction: row; align-items: center; box-shadow: 2px 2px 0  rgba(0, 0, 0, 1);">
+        <div class="div-projets-tags-text">
+            <h3>Architecture MVC</h3>
+            <p>
+                L'architecture MVC est implémentée dans le cadre du développement web, 
+                ce qui permet de structurer le projet de manière modulaire et 
+                extensible. Cela facilite la maintenance et l'évolution du projet, 
+                notamment pour les futures fonctionnalités. Cette 
+                organisation sera particulièrement utile par la suite, 
+                lors de l'implémentation 
+                d'une API pour récupérer des données depuis le serveur PHP.
+            </p>
+        </div>
+    </div>
+    <div class="div-projets-projet" style="margin-left: 100px;margin-right: 100px; background-color: #F7CB45;flex-direction: row; align-items: center; box-shadow: 2px 2px 0  rgba(0, 0, 0, 1);">
+        <div class="div-projets-tags-text">
+            <h3>Patron DAO</h3>
+            <p>
+                Le patron DAO rend le code plus modulaire, 
+                lisible et facile à maintenir. En séparant 
+                la logique de la base de données de celle de 
+                l'application, il permet de faire évoluer 
+                l'application sans impacter le code lié à la 
+                gestion des données.
+            </p>
+        </div>
+    </div>
+
+    <h2 style="margin-left: 100px;margin-right: 100px; margin-top: 100px;margin-bottom: 50px; text-align: center;">Fonctionnalités de l'application</h2>
     <div class="arrow-div">
         <img src="./images/arrow-left.png" style="height: 100px;" id="arrow-left" class="arrow">
         <div style="display: flex; flex-direction: column; align-items: center;">
@@ -75,12 +107,18 @@
         let position = 0;
         let arr = [];
         let desc = [];
-        desc.push("Conception du modèle conceptuel de données","Conception du modèle conceptuel de données",
-        "Transformation du MCD en diagramme de classe","Eciture des tests","Gestion du backlog de sprint",
-        "Burndown Chart","Calcul de la vélocité et la capacité d'un sprint")
-        arr.push("./images/projet-takraw2.png","./images/projet-immobilier3.png",
-        "./images/projet-immobilier4.png","./images/projet-immobilier5.png","./images/projet-immobilier6.png",
-        "./images/projet-immobilier7.png","./images/projet-immobilier8.png");
+        desc.push("Tableau de bord",
+        "Enregistrement des informations d'un joueur",
+        "Liste des joueurs",
+        "Commentaires joueur",
+        "Liste des matchs",
+        "Feuille de match")
+        arr.push("./images/projet-takraw1.png",
+        "./images/projet-takraw3.png",
+        "./images/projet-takraw4.png",
+        "./images/projet-takraw5.png",
+        "./images/projet-takraw6.png",
+        "./images/projet-takraw7.png");
         function updateElements(){
             if (position==0){
                 document.getElementById("arrow-left").style.visibility = "hidden";
