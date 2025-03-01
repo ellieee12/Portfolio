@@ -3,11 +3,11 @@ function generateNav(){
     let p = document.createElement("p");
     p.innerText = "ELLISA EE";
     let div = document.createElement("div");
-    let aboutMe = createLink("About Me","index.html");
-    let etudes = createLink("Etudes en France","#");
-    let comp = createLink("Projets","#");
-    let benevol = createLink("Bénévolat","#");
-    let contact = createLink("Contact","#");
+    let aboutMe = createLink("About Me","#about-me");
+    let etudes = createLink("Etudes en France","#etudes");
+    let comp = createLink("Projets","#div-projets");
+    let benevol = createLink("Bénévolat","#benevolat");
+    let contact = createLink("Contact","#contact");
 
     nav.appendChild(p);
     div.appendChild(aboutMe);
